@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Security Grid 2024 | AI/ML Defense Systems Conference</title>
+    <meta name="description" content="Join Lakshmi Lavanya N at Neural Security Grid - Where Artificial Intelligence meets Cybersecurity. Interactive ML demos, threat detection workshops, and cutting-edge AI research.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Neural Network Background Canvas -->
+    <canvas id="neuralCanvas"></canvas>
+    
+    <!-- Threat Score Visualization -->
+    <div id="threatScore" class="threat-indicator">
+        <div class="threat-label">SYSTEM STATUS</div>
+        <div class="threat-value">
+            <span id="scoreValue">0</span>
+            <span class="threat-unit">%</span>
+        </div>
+        <div class="threat-bar">
+            <div id="scoreBar" class="threat-fill"></div>
+        </div>
+        <div class="threat-status" id="threatStatus">INITIALIZING</div>
+    </div>
+
+    <!-- Matrix Rain Effect -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="glitch-wrapper">
+                <h1 class="hero-title glitch" data-text="NEURAL SECURITY GRID">NEURAL SECURITY GRID</h1>
+            </div>
+            <div class="hero-subtitle">
+                <span class="accent-line"></span>
+                <p>WHERE AI MEETS CYBERSECURITY</p>
+                <span class="accent-line"></span>
+            </div>
+            <div class="hero-date">
+                <div class="date-block">
+                    <span class="date-label">EVENT DATE</span>
+                    <span class="date-value">MARCH 15-16, 2024</span>
+                </div>
+                <div class="date-block">
+                    <span class="date-label">LOCATION</span>
+                    <span class="date-value">RNS INSTITUTE, BANGALORE</span>
+                </div>
+            </div>
+            <div class="cta-group">
+                <button class="cta-primary" id="registerBtn">
+                    <span class="btn-text">ACCESS GRANTED</span>
+                    <span class="btn-icon">→</span>
+                </button>
+                <button class="cta-secondary" id="learnMoreBtn">
+                    <span class="btn-text">EXPLORE SESSIONS</span>
+                </button>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>SCROLL TO UNLOCK</span>
+            </div>
+        </header>
+
+        <!-- Security Layers Section -->
+        <section class="security-layers" id="layers">
+            <h2 class="section-title">
+                <span class="title-accent">SECURITY</span> LAYERS
+            </h2>
+            <p class="section-subtitle">Navigate through our AI/ML defense systems</p>
+            
+            <div class="layers-grid">
+                <!-- Layer 1: NutriScan AI -->
+                <div class="layer-card" data-layer="1">
+                    <div class="layer-header">
+                        <span class="layer-number">01</span>
+                        <div class="layer-status">
+                            <span class="status-dot"></span>
+                            <span>ACTIVE</span>
+                        </div>
+                    </div>
+                    <h3 class="layer-title">NutriScan AI Analytics</h3>
+                    <p class="layer-desc">Full-stack ML platform leveraging XGBoost & K-Means for sustainable fruit recommendations. Deployed on Google Cloud with real-time analytics.</p>
+                    <div class="layer-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">K-Means</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">GCP</span>
+                    </div>
+                    <div class="layer-metrics">
+                        <div class="metric">
+                            <span class="metric-value">15%</span>
+                            <span class="metric-label">Accuracy Boost</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">100K+</span>
+                            <span class="metric-label">Data Points</span>
+                        </div>
+                    </div>
+                    <button class="layer-unlock">UNLOCK DEMO</button>
+                </div>
+
+                <!-- Layer 2: Cyber Threat Detection -->
+                <div class="layer-card" data-layer="2">
+                    <div class="layer-header">
+                        <span class="layer-number">02</span>
+                        <div class="layer-status">
+                            <span class="status-dot"></span>
+                            <span>ACTIVE</span>
+                        </div>
+                    </div>
+                    <h3 class="layer-title">Cyber Threat Detection</h3>
+                    <p class="layer-desc">Unsupervised anomaly detection using Isolation Forest & Local Outlier Factor. Real-time threat mitigation with advanced feature engineering.</p>
+                    <div class="layer-tech">
+                        <span class="tech-tag">Isolation Forest</span>
+                        <span class="tech-tag">LOF</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Real-time ML</span>
+                    </div>
+                    <div class="layer-metrics">
+                        <div class="metric">
+                            <span class="metric-value">12%</span>
+                            <span class="metric-label">False Positive ↓</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">98.7%</span>
+                            <span class="metric-label">Detection Rate</span>
+                        </div>
+                    </div>
+                    <button class="layer-unlock">UNLOCK DEMO</button>
+                </div>
+
+                <!-- Layer 3: Embedded Systems -->
+                <div class="layer-card" data-layer="3">
+                    <div class="layer-header">
+                        <span class="layer-number">03</span>
+                        <div class="layer-status">
+                            <span class="status-dot"></span>
+                            <span>ACTIVE</span>
+                        </div>
+                    </div>
+                    <h3 class="layer-title">Embedded IoT Security</h3>
+                    <p class="layer-desc">8051 microcontroller-based alcohol detection system. Hardware-software integration for workplace safety and driver monitoring.</p>
+                    <div class="layer-tech">
+                        <span class="tech-tag">8051 MCU</span>
+                        <span class="tech-tag">MQ3 Sensor</span>
+                        <span class="tech-tag">Embedded C</span>
+                        <span class="tech-tag">IoT</span>
+                    </div>
+                    <div class="layer-metrics">
+                        <div class="metric">
+                            <span class="metric-value">🏆</span>
+                            <span class="metric-label">Ideathon Winner</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">&lt;200ms</span>
+                            <span class="metric-label">Response Time</span>
+                        </div>
+                    </div>
+                    <button class="layer-unlock">UNLOCK DEMO</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organizer Section -->
+        <section class="organizer" id="organizer">
+            <h2 class="section-title">
+                <span class="title-accent">EVENT</span> ARCHITECT
+            </h2>
+            
+            <div class="organizer-card">
+                <div class="organizer-visual">
+                    <div class="avatar-container">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-placeholder">
+                            <span class="avatar-initial">LN</span>
+                        </div>
+                        <div class="avatar-pulse"></div>
+                    </div>
+                </div>
+                
+                <div class="organizer-content">
+                    <h3 class="organizer-name">Lakshmi Lavanya N</h3>
+                    <p class="organizer-role">AI/ML Engineer & Security Researcher</p>
+                    
+                    <div class="organizer-bio">
+                        <p>Passionate AI/ML Engineering student with expertise in designing scalable, optimized solutions. Experienced in developing end-to-end applications and machine learning systems with focus on performance and real-world impact.</p>
+                    </div>
+                    
+                    <div class="organizer-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">8.80</span>
+                            <span class="stat-label">CGPA</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">150+</span>
+                            <span class="stat-label">Competition Win</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Major Projects</span>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-education">
+                        <div class="edu-item">
+                            <div class="edu-icon">🎓</div>
+                            <div class="edu-details">
+                                <strong>RNS Institute of Technology</strong>
+                                <span>B.E. in CSE (AI/ML) • 2022 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-achievements">
+                        <h4>Recent Achievements</h4>
+                        <ul>
+                            <li>🏆 <strong>1st Prize</strong> - IEEE YESIST12 (150+ participants)</li>
+                            <li>🥈 <strong>2nd Prize</strong> - AI-IDEA Project Expo (100+ participants)</li>
+                            <li>📜 Certified in AI & Deep Learning</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="organizer-links">
+                        <a href="https://www.linkedin.com/in/lakshmi-lavanya-n" class="social-link" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/lakshmilavanya" class="social-link" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://leetcode.com/lakshmilavanya" class="social-link" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                            </svg>
+                            LeetCode
+                        </a>
+                        <a href="mailto:lakshmilavanya292@gmail.com" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agenda Section -->
+        <section class="agenda" id="agenda">
+            <h2 class="section-title">
+                <span class="title-accent">EVENT</span> AGENDA
+            </h2>
+            <p class="section-subtitle">Two days of cutting-edge AI/ML & Security workshops</p>
+            
+            <div class="agenda-container">
+                <!-- Day 1 -->
+                <div class="day-section">
+                    <div class="day-header">
+                        <span class="day-label">DAY 01</span>
+                        <span class="day-date">March 15, 2024</span>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="time-badge">09:00 AM</div>
+                            <div class="timeline-content">
+                                <h4>Opening Keynote: AI in Security</h4>
+                                <p>Introduction to Neural Security Grid and modern threat landscape</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">10:30 AM</div>
+                            <div class="timeline-content">
+                                <h4>Workshop: XGBoost for Real-World ML</h4>
+                                <p>Hands-on session with NutriScan AI analytics platform</p>
+                                <span class="workshop-tag">Interactive Demo</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">01:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>Lunch & Networking</h4>
+                                <p>Connect with fellow AI/ML enthusiasts</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">02:30 PM</div>
+                            <div class="timeline-content">
+                                <h4>Anomaly Detection Masterclass</h4>
+                                <p>Isolation Forest & LOF for cyber threat detection</p>
+                                <span class="workshop-tag">Live Coding</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">04:30 PM</div>
+                            <div class="timeline-content">
+                                <h4>Panel Discussion: Future of AI Security</h4>
+                                <p>Industry experts discuss emerging trends</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 2 -->
+                <div class="day-section">
+                    <div class="day-header">
+                        <span class="day-label">DAY 02</span>
+                        <span class="day-date">March 16, 2024</span>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="time-badge">09:00 AM</div>
+                            <div class="timeline-content">
+                                <h4>Embedded Systems Security</h4>
+                                <p>IoT device security with 8051 microcontroller demonstrations</p>
+                                <span class="workshop-tag">Hardware Demo</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">11:00 AM</div>
+                            <div class="timeline-content">
+                                <h4>Cloud ML Deployment Workshop</h4>
+                                <p>Deploy ML models on Google Cloud Platform</p>
+                                <span class="workshop-tag">Hands-on Lab</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">01:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>Lunch Break</h4>
+                                <p>Explore project exhibitions</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">02:30 PM</div>
+                            <div class="timeline-content">
+                                <h4>Hackathon: Build Your Defense Layer</h4>
+                                <p>Team-based challenge to create ML security solutions</p>
+                                <span class="workshop-tag">Competition</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-badge">05:00 PM</div>
+                            <div class="timeline-content">
+                                <h4>Awards & Closing Ceremony</h4>
+                                <p>Recognition of top performers and closing remarks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Section -->
+        <section class="registration" id="register">
+            <div class="register-container">
+                <div class="register-content">
+                    <h2 class="register-title">SECURE YOUR SPOT</h2>
+                    <p class="register-desc">Join 500+ AI/ML enthusiasts in exploring the intersection of artificial intelligence and cybersecurity. Limited seats available.</p>
+                    
+                    <div class="register-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Hands-on ML workshops</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Interactive project demos</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Networking opportunities</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Certificates & swag</span>
+                        </div>
+                    </div>
+                    
+                    <form class="register-form" id="registrationForm">
+                        <div class="form-row">
+                            <input type="text" placeholder="Full Name" required class="form-input">
+                            <input type="email" placeholder="Email Address" required class="form-input">
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" placeholder="Phone Number" required class="form-input">
+                            <select class="form-input" required>
+                                <option value="">Select Track</option>
+                                <option value="ml">Machine Learning</option>
+                                <option value="security">Cybersecurity</option>
+                                <option value="iot">Embedded Systems</option>
+                                <option value="all">All Tracks</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <span>REGISTER NOW</span>
+                            <span class="submit-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="register-visual">
+                    <div class="stats-display">
+                        <div class="stat-box">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Attendees</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number" data-target="8">0</div>
+                            <div class="stat-label">Speakers</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number" data-target="2">0</div>
+                            <div class="stat-label">Days</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Neural Security Grid</h3>
+                    <p>Advancing AI/ML security research and education</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#layers">Sessions</a></li>
+                        <li><a href="#agenda">Agenda</a></li>
+                        <li><a href="#organizer">Organizer</a></li>
+                        <li><a href="#register">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 lakshmilavanya292@gmail.com</p>
+                    <p>📱 +91 7795952603</p>
+                    <p>📍 RNS Institute, Bangalore</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/lakshmi-lavanya-n" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/lakshmilavanya" target="_blank">GitHub</a>
+                        <a href="https://leetcode.com/lakshmilavanya" target="_blank">LeetCode</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Neural Security Grid. Organized by Lakshmi Lavanya N.</p>
+                <p class="footer-tag">Built with AI • Secured with ML</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
