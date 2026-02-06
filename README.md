@@ -6,7 +6,7 @@ An immersive, cyberpunk-themed event landing page featuring neural network visua
 
 **Neural Security Grid 2024: Where AI Meets Cybersecurity**
 
-- **Date**: March 15-16, 2024
+- **Date**: March 15-16, 2026
 - **Location**: RNS Institute of Technology, Bangalore
 - **Organizer**: Lakshmi Lavanya N - AI/ML Engineer & Security Researcher
 
@@ -166,9 +166,9 @@ Try the Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A
 **Lakshmi Lavanya N**
 - Email: lakshmilavanya292@gmail.com
 - Phone: +91 7795952603
-- LinkedIn: [lakshmi-lavanya-n](https://www.linkedin.com/in/lakshmi-lavanya-n)
-- GitHub: [lakshmilavanya](https://github.com/lakshmilavanya)
-- LeetCode: [lakshmilavanya](https://leetcode.com/lakshmilavanya)
+- LinkedIn: [lakshmi-lavanya-n](https://www.linkedin.com/in/lakshmi-lavanya-597429259/)
+- GitHub: [lakshmilavanya](https://github.com/lakshmi0698)
+- LeetCode: [lakshmilavanya](https://leetcode.com/u/H2QkhZCrt5/)
 
 ## 📄 License
 
